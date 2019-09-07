@@ -68,7 +68,7 @@ void Pointz::sortByCell(size_t maxDigits)
     }
 
 
-    #pragma oss task for out(buckets)
+    #pragma oss task for inout(buckets)
     for (size_t i = 0; i < this->size(); ++i)
     {
         for (size_t j = 0; j < maxDigits; ++j)
@@ -140,7 +140,7 @@ void Pointz::reorder(size_t maxDigits)
         }
     }
 
-    #pragma oss task for out(buckets)
+    #pragma oss task for inout(buckets)
     for (size_t i = 0; i < this->size(); ++i)
     {
         for (size_t j = 0; j < maxDigits; ++j)
